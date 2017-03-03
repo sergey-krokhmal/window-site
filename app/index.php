@@ -1,2 +1,4 @@
-<h1>Мего главная страница</h1>
-<a href="/admin/login"></a>
+<?
+require_once($_SERVER['DOCUMENT_ROOT'].'/app/header.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/app/main.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/app/footer.php');

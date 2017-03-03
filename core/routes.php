@@ -100,6 +100,12 @@ $routes = array
 		//'http_method' => 'GET',
 		'script' => 'app/admin/index'
 	),
+    
+    array(
+		'pattern' => '~^/$~',
+		//'http_method' => 'GET',
+		'script' => 'app/index'
+	),
 
 	// Пример (http://localhost/forum/web-development/php/12345.xhtml)
 	array(

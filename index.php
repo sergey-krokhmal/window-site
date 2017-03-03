@@ -3,7 +3,7 @@
 	require_once($_SERVER['DOCUMENT_ROOT']."/core/routes.php");
 	
 	$db = new DbDriverPdo($db_config_params['wd']['params']);
-	$module = 'app/404.php';
+	//$module = 'app/404.php';
 
 	//$url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 	//$url_params = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
@@ -17,7 +17,9 @@
 				require_once($_SERVER['DOCUMENT_ROOT']."/".$map['script'].".php");
 				$db->closeConnection();
 				exit();
-			}
+			} else {
+                //require_once($_SERVER['DOCUMENT_ROOT']."/app/404.php");
+            }
 			
 			$params = array();
 			
@@ -28,7 +30,7 @@
 				}
 			}
 			
-			$module = $map['class'];
+			//$module = $map['class'];
 			$action = $map['method'];
 			break;
 		}
@@ -36,7 +38,7 @@
 
 	// Use magic and include only nesessory module
 	if ($module !== 'NotFound'){
-		require_once($_SERVER['DOCUMENT_ROOT']."/app/404.php");
+		
 	}
     
 	//$db->run("INSERT INTO `test` SET data = '".$_SERVER['REQUEST_METHOD']."'");
