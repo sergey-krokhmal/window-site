@@ -1,0 +1,11 @@
+.table-middled>tbody>tr>td{
+    vertical-align: middle;
+}
+
+.list-table {
+    max-width: 550px;
+}
+
+.item-edit-buttons {
+    max-width: 200px;
+}

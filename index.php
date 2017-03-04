@@ -1,46 +1,54 @@
 <?
-	require_once($_SERVER['DOCUMENT_ROOT']."/core/db/DB.php");
 	require_once($_SERVER['DOCUMENT_ROOT']."/core/routes.php");
+	require_once($root."/core/db/DB.php");
 	
 	$db = new DbDriverPdo($db_config_params['wd']['params']);
-	//$module = 'app/404.php';
-
-	//$url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-	//$url_params = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+    
+    // Получить uri запрос
 	$url_path = $_SERVER['REQUEST_URI'];
-	//echo $url_path;
-	foreach ($routes as $map)
-	{
+    
+    $route_found = false;
+    
+    // Для всех маршрутов
+	foreach ($routes as $map) {
+        // Найти маршрут по uri
 		if (preg_match($map['pattern'], $url_path, $matches) /*&& $map['http_method'] == $_SERVER['REQUEST_METHOD']*/) {
 			array_shift($matches);
-			if(isset($map['script'])){
-				require_once($_SERVER['DOCUMENT_ROOT']."/".$map['script'].".php");
-				$db->closeConnection();
-				exit();
-			} else {
-                //require_once($_SERVER['DOCUMENT_ROOT']."/app/404.php");
-            }
-			
-			$params = array();
-			
+            
+            $params = array();
 			foreach ($matches as $index => $value) {
 				if (isset($map['aliases'][$index])){
 					$params[$map['aliases'][$index]] = $value;
 					array_shift($matches);
 				}
 			}
-			
-			//$module = $map['class'];
-			$action = $map['method'];
+            
+            // Если нашли маршрут и в нем присутствует имя скрипта
+			if(isset($map['script'])) {
+                // Устанавливаем этот скрипт как обработчик контента страницы
+                $main_content = $root."/".$map['script'].".php";
+                $route_found = true;
+			} else {
+                $main_content = $root."/app/shared/404.php";
+            }
+            // Если маршрут для самостоятельной страницы - загружаем только ее
+            if ($map['page'] ?? false) {
+                require_once($main_content);
+            } elseif ($map['admin'] ?? false) {
+                // Если маршрут относиться к админке, то берем компоновщик админки (для нее другие шапка и подвал)
+                require_once($root."/app/admin/index.php");
+            } else {
+                // Иначе берем главный компоновщик
+                require_once($root."/app/index.php");
+            }
+            
+            // Цикл поиска маршрута прерываем
 			break;
 		}
 	}
-
-	// Use magic and include only nesessory module
-	if ($module !== 'NotFound'){
-		
-	}
     
-	//$db->run("INSERT INTO `test` SET data = '".$_SERVER['REQUEST_METHOD']."'");
-	$db->closeConnection();
+    if ($route_found == false) {
+        $main_content = $root."/app/shared/404.php";
+        require_once($root."/app/admin/index.php");
+    }
 ?>

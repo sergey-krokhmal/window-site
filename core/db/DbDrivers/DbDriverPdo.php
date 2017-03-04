@@ -85,6 +85,10 @@ class DbDriverPdo extends DbDriver{
 		return $this->resource;
 	}
 	
+    public function quote($value) {
+        return $this->dbh->quote($value);
+    }
+    
 	// Create DB connection
 	public function createConnection(){
 		$this->dbh = new PDO(
