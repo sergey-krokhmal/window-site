@@ -1,3 +1,39 @@
+<?
+    if (session_id()){
+        unset($_SESSION);
+    } else {
+        session_start();
+    }
+    unset($_SESSION['auth']);
+    if ($_POST['login'] ?? false && $_POST['password'] ?? false) {
+        require_once($root."/core/db/DB.php");
+        $login = $_POST['login'];
+        $pass = $_POST['password'];
+        
+        $wrong_user = false;
+        $wrong_pass = false;
+        
+        $login = $db->quote($login);
+        $usr = $db->selectFirst("select * from `users` where login = $login");
+        if ($usr) {
+            $pass = md5($pass);
+            $usr_pass = $db->selectFirst("select * from `users` where login = $login and password = '$pass'");
+            if ($usr_pass) {
+                $auth_data = array(
+                    'user' => $usr_pass['login'],
+                    'key' => md5($usr_pass['id']),
+                );
+                $_SESSION['auth'] = $auth_data;
+                header("Location: /admin");
+            } else {
+                $wrong_pass = true;
+            }
+        } else {
+            $wrong_user = true;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,10 +55,10 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-signin" role="form" action="/admin" method="POST">
+            <form class="form-signin" role="form" action="/admin/login" method="POST">
                 <h2 class="form-signin-heading">Введите логин и пароль</h2>
-                <input type="text" class="form-control" placeholder="Логин" required autofocus>
-                <input type="password" class="form-control" placeholder="Пароль" required>
+                <input type="text" class="form-control" placeholder="Логин" name="login" required autofocus>
+                <input type="password" class="form-control" placeholder="Пароль" name="password" required>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
             </form>
         </div>

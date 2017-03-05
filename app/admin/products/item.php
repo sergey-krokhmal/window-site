@@ -13,8 +13,6 @@ if ($id){
     }   
 }
 
-if ($id_found) {
-    require_once($root."/app/templates/admin/products/item.php");
-} else {
-    require_once($root."/app/shared/404.php");
+if (!$id_found) {
+    $main_content = $script_404;
 }

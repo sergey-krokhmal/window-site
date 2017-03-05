@@ -26,20 +26,25 @@
             // Если нашли маршрут и в нем присутствует имя скрипта
 			if(isset($map['script'])) {
                 // Устанавливаем этот скрипт как обработчик контента страницы
-                $main_content = $root."/".$map['script'].".php";
+                $script = $app_path.$map['script'].".php";
+                $main_content = $app_path."templates/".$map['script'].".php";
                 $route_found = true;
 			} else {
-                $main_content = $root."/app/shared/404.php";
+                $main_content = $app_path."shared/404.php";
             }
+            if (file_exists($script)){
+                require_once($script);
+            }
+            
             // Если маршрут для самостоятельной страницы - загружаем только ее
             if ($map['page'] ?? false) {
-                require_once($main_content);
+                require_once($script);
             } elseif ($map['admin'] ?? false) {
                 // Если маршрут относиться к админке, то берем компоновщик админки (для нее другие шапка и подвал)
-                require_once($root."/app/admin/index.php");
+                require_once($app_path."admin/index.php");
             } else {
                 // Иначе берем главный компоновщик
-                require_once($root."/app/index.php");
+                require_once($app_path."index.php");
             }
             
             // Цикл поиска маршрута прерываем
@@ -48,7 +53,7 @@
 	}
     
     if ($route_found == false) {
-        $main_content = $root."/app/shared/404.php";
-        require_once($root."/app/admin/index.php");
+        $main_content = $app_path."shared/404.php";
+        //require_once($root."/app/admin/index.php");
     }
 ?>

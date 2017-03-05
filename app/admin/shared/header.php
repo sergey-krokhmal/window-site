@@ -1,3 +1,20 @@
+<?
+    if(!session_id()) {
+        session_start();
+    }
+    if ($_SESSION['auth'] ?? false) {
+        $auth = $_SESSION['auth'];
+        $login = $auth['user'];
+        $id = $auth['key'];
+        $query = "select id from `users` where login = '$login' and MD5(id) = '$id'";
+        if (count($usr = $db->selectArray($query)) <= 0) {
+            header("Location: /admin/login");
+        }
+    } else {
+        header("Location: /admin/login");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,7 +52,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">Dashboard</a></li>
                         <li><a href="#">Settings</a></li>
-                        <li><a href="#">Profile</a></li>
+                        <li><a href="#"><?=$login?></a></li>
                         <li><a href="/admin/login">Выход</a></li>
                     </ul>
                     <form class="navbar-form navbar-right">

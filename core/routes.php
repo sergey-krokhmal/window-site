@@ -2,6 +2,10 @@
 // Конфигурация маршрутов URL проекта.
 
 $root = $_SERVER['DOCUMENT_ROOT'];
+$app = "app/";
+
+$app_path = $root."/".$app;
+$script_404 = $app_path."/shared/404.php";
 
 $routes = array
 (
@@ -21,45 +25,45 @@ $routes = array
 	// GET /admin
 	array(
 		'pattern' => '~^/admin/login$~',
-		'script' => 'app/admin/login',
+		'script' => 'admin/login',
         'page' => true
 	),
     
     array(
 		'pattern' => '~^/admin$~',
-		'script' => 'app/admin/main',
+		'script' => 'admin/main',
         'admin' => true
 	),
     
     // ----------Товары------------
     array(
 		'pattern' => '~^/admin/products/(\d+)$~',
-		'script' => 'app/admin/products/item',
+		'script' => 'admin/products/item',
         'aliases' => array('id'),
         'admin' => true
 	),
     
     array(
 		'pattern' => '~^/admin/products/edit/(\d+)$~',
-		'script' => 'app/admin/products/edit',
+		'script' => 'admin/products/edit',
         'aliases' => array('id'),
         'admin' => true
 	),
     
     array(
 		'pattern' => '~^/admin/products$~',
-		'script' => 'app/admin/products/list',
+		'script' => 'admin/products/list',
         'admin' => true
 	),
     
     array(
 		'pattern' => '~^/*$~',
-		'script' => 'app/main'
+		'script' => 'main'
 	),
     
     array(
 		'pattern' => '~^/404$~',
-		'script' => 'app/shared/404'
+		'script' => 'shared/404'
 	),
 
     
