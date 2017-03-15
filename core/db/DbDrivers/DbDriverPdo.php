@@ -1,7 +1,6 @@
 <?php
-namespace Krokhmal\Soft\Data\Database;
 
-use \PDO;
+require_once("DbDriver.php");	// Import abstract DbDriver class
 
 // Implementation of DbDriver with PDO dirver
 class DbDriverPdo extends DbDriver{
@@ -86,6 +85,10 @@ class DbDriverPdo extends DbDriver{
 		return $this->resource;
 	}
 	
+    public function quote($value) {
+        return $this->dbh->quote($value);
+    }
+    
 	// Create DB connection
 	public function createConnection(){
 		$this->dbh = new PDO(
@@ -96,8 +99,7 @@ class DbDriverPdo extends DbDriver{
 			$this->pass,				// Set password
 			array(
 				// Usage of persistent connection (true - yes, false - no)
-				PDO::ATTR_PERSISTENT => 
-                    isset($this->params['persistent']) ? $this->params['persistent']: false
+				PDO::ATTR_PERSISTENT => $this->params['persistent'] ?? false
 			)
 		);
 	}
@@ -108,3 +110,5 @@ class DbDriverPdo extends DbDriver{
 		unset($this->dbh);		// Unset PDO handler
 	}
 }
+
+?>

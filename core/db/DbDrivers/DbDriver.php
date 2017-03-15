@@ -1,6 +1,6 @@
 <?php
-namespace Krokhmal\Soft\Data\Database;
 
+// DB 
 abstract class DbDriver
 {
 	// -Data-
@@ -19,28 +19,22 @@ abstract class DbDriver
 	// -Behavior-
 	
 	// Construct the DBDriver
-	public function __construct($params)
-    {
-    }
+	public function __construct($params){}
 	
 	// Execute user sql query to DB with return of result resource
-	public function run($sql_query)
-    {
+	public function run($sql_query){
 		$this->sql_query = $sql_query;		// Save last user sql query
 		return $this->query($sql_query);	// Execute query and return query resource
 	}
 	
 	// Get first select row of sql_query as assoc array
-	public function selectFirst($sql_query)
-    {
+	public function selectFirst($sql_query){
 		$this->executeQuery($sql_query); // Execute query
 		return $this->row($this->resource);			// Get one next row (first) and return it
 	}
 	
-	// Get assoc array of select result assoc rows 
-    // by sql query (not best implementation, may to override)
-	public function selectArray($sql_query)
-    {
+	// Get assoc array of select result assoc rows by sql query (not best implementation, may to override)
+	public function selectArray($sql_query){
 		$this->executeQuery($sql_query); // Execute query
 		$arr = array();								// Result array
 		while ($row = $this->row($this->resource)) {	// Fetch evry row and push to result array
@@ -49,8 +43,7 @@ abstract class DbDriver
 		return $arr;
 	}
 	
-	public function selectKeyArray($sql_query, $key)
-    {
+	public function selectKeyArray($sql_query, $key){
 		$this->executeQuery($sql_query); // Execute query
 		$arr = array();
 		while ($row = $this->row($this->resource)) {
@@ -59,8 +52,7 @@ abstract class DbDriver
 		return $arr;
 	}
 	
-	public function selectValueArray($sql_query, $value)
-    {
+	public function selectValueArray($sql_query, $value){
 		$this->executeQuery($sql_query); // Execute query
 		$arr = array();
 		while ($row = $this->row($this->resource)) {
@@ -69,8 +61,7 @@ abstract class DbDriver
 		return $arr;
 	}
 	
-	public function selectKeyValueArray($sql_query, $key, $value)
-    {
+	public function selectKeyValueArray($sql_query, $key, $value){
 		$this->executeQuery($sql_query); // Execute query
 		$arr = array();
 		while ($row = $this->row($this->resource)) {
@@ -80,20 +71,19 @@ abstract class DbDriver
 	}
 	
 	// Execute query with saving sql_query and result resource
-	protected function executeQuery($sql_query)
-    {
+	protected function executeQuery($sql_query){
 		$this->sql_query = $sql_query;				// Save last user sql query
 		$this->resource = $this->query($sql_query); // Execute query
 	}
 	
 	// Get next row of statement resource 
-	abstract public function nextRow($resource);
+	public abstract function nextRow($resource);
 	
 	// Get total count of select rows by query resource
-	abstract public function rowCount($resource);
+	public abstract function rowCount($resource);
 	
 	// Get last Id
-	abstract public function lastId($resource);
+	public abstract function lastId($resource);
 	
 	// Get last executed query
 	public function lastQuery(){
@@ -101,14 +91,16 @@ abstract class DbDriver
 	}
 	
 	// Fetch select row as assoc array
-	abstract protected function row($resource);
+	protected abstract function row($resource);
 	
 	// Abstract query to DB
-	abstract protected function query($sql_query);
+	protected abstract function query($sql_query);
 	
 	// Abstract function of connection create
-	abstract public function createConnection();
+	public abstract function createConnection();
 	
 	// Abstract closing of connection
-	abstract public function closeConnection();
+	public abstract function closeConnection();
+	
 }
+?>
