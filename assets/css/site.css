@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Lato-Regular";
+    src: url("../fonts/Lato/Lato-Regular.eot");
+    src: url("../fonts/Lato/Lato-Regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Lato/Lato-Regular.woff") format("woff"),
+    url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url("../fonts/Lato/Lato-Light.eot");
+    src: url("../fonts/Lato/Lato-Light.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Lato/Lato-Light.woff") format("woff"),
+    url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "GothamPro-Light";
+    src: url("../fonts/GothamPro/GothamProLight.eot");
+    src: url("../fonts/GothamPro/GothamProLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GothamPro/GothamProLight.woff") format("woff"),
+    url("../fonts/GothamPro/GothamProLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: "Lato-Regular";
+    min-width: 260px;
+}
+
+header {
+    background-color: #fff;
+}
+
+.header-top {
+    display: table;
+    /* padding: 1.3em 0; */
+    width: 100%;
+}
+
+.header-logo {
+    /* float: left; */
+    display: table-cell;
+}
+
+.header-logo a {
+    display: block;
+}
+
+.header-logo img {
+    width: 230px;
+}
+
+.elem {
+    /* float: right; */
+    width: 100px;
+    /* height: 40px; */
+    background: #ddd;
+    display: table-cell;
+}
+
+.hol:before{
+content: " ";
+display:block;
+background: #fff;
+border-bottom: 15px solid #ddd; 
+border-left: 250px solid transparent;
+}
+
+.header-menu-stripe {
+    background-color: #313131;
+}
+
+.header-menu {
+    
+}
