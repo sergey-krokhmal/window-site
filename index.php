@@ -30,7 +30,7 @@
                 $main_content = $app_path."templates/".$map['script'].".php";
                 $route_found = true;
 			} else {
-                $main_content = $app_path."shared/404.php";
+                $main_content = $script_404;
             }
             if (file_exists($script)){
                 require_once($script);
@@ -53,7 +53,7 @@
 	}
     
     if ($route_found == false) {
-        $main_content = $app_path."shared/404.php";
-        //require_once($root."/app/admin/index.php");
+        $main_content = $script_404;
+        //require_once($app_path."index.php");
     }
 ?>

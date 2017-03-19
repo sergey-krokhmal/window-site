@@ -96,8 +96,8 @@ border-left: 250px solid transparent;
     
 }
 
-.main {
-    min-height: 650px;
+.top-main {
+    /*min-height: 650px;*/
     background: url(/assets/images/bg2.png)no-repeat -420px 0px, url(/assets/images/w.png) repeat-x 0px 0px;
     background-size: cover, cover;
 }
@@ -385,4 +385,138 @@ border-left: 250px solid transparent;
     position: absolute;
     left: -60px;
     top: 60px;
+}
+
+.bottom-info-title {
+    background: url(/assets/images/main-info.png) no-repeat;
+    background-size: cover;
+    height: 80px;
+}
+
+.bottom-info-content {
+    margin-top: 10px;
+}
+
+.bottom-info-image-holder {
+    text-align: center;
+}
+
+footer {
+    background: url(/assets/images/footer-bg.png) no-repeat;
+    background-size: cover;
+}
+
+.footer-info {
+}
+
+.footer-info>div {
+    padding: 43px 22px;
+}
+
+.footer-company-info {
+    color: white;
+    margin-top: 12px;
+}
+
+.footer-logo {
+    width: 165px;
+}
+
+.footer-info .social-link {
+    height: 42px;
+    width: 42px;
+    display: block;
+    margin: auto;
+    border: 2px solid #d5d5d4;
+    border-radius: 21px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.footer-info .social-link.youtube {
+    background-image: url(/assets/images/social_yt.png);
+    
+}
+
+.footer-info .social-link.odnoklasniki {
+    background-image: url(/assets/images/social_ok.png);
+}
+
+.footer-info .social-link.vk {
+    background-image: url(/assets/images/social_vk.png);
+    background-position: 4px;
+}
+
+.footer-info .callback-title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+}
+
+.footer-info .callback-buttons{
+    margin-top: 23px;
+}
+
+.footer-info .callback-buttons .btn {
+    text-transform: lowercase;
+    color: #000;
+    font-size: 17px;
+    padding: 4px;
+    margin-top: 12px;
+    border: none;
+}
+
+.footer-info .callback-buttons .btn:hover {
+    background-color: #fff;
+}
+
+.footer-info .callback-buttons .call {
+    background-color: #d6d7d8;
+}
+.footer-info .callback-buttons .email {
+    background-color: #bcd4eb;
+}
+.footer-info .callback-buttons .diller {
+    background-color: #71ccfa;
+}
+
+.footer-info .offices {
+    text-align: center;
+}
+
+.footer-info .offices-title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+}
+
+.footer-info .contacts-title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+}
+
+.footer-info .contacts-list {
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer-info .contacts-list .contacts-item {
+    margin-top: 18px;
+}
+
+.footer-bootom-stripe {
+    height: 70px;
+    background-color: rgba(67, 67, 67, 0.48);
+}
+
+.copyright-holder {
+    
+    
+}
+
+.copyright-mark {
+    line-height: 70px;
+    color: white;
+    font-size: 12px;
 }

@@ -5,7 +5,7 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 $app = "app/";
 
 $app_path = $root."/".$app;
-$script_404 = $app_path."/shared/404.php";
+$script_404 = $app_path."shared/404.php";
 
 $routes = array
 (
