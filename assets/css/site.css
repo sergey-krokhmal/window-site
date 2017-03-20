@@ -96,6 +96,10 @@ border-left: 250px solid transparent;
     
 }
 
+.main {
+    
+}
+
 .top-main {
     /*min-height: 650px;*/
     background: url(/assets/images/bg2.png)no-repeat -420px 0px, url(/assets/images/w.png) repeat-x 0px 0px;
@@ -143,6 +147,11 @@ border-left: 250px solid transparent;
 
 .header-menu .nav>li>a:hover,.header-menu .nav>li>a:focus {
     background-color: #313131;
+}
+
+.header-menu .dropdown-menu>li>a {
+    white-space: normal;
+    line-height: 13px;
 }
 
 .header-menu .dropdown-menu>li>a:hover {
@@ -212,6 +221,7 @@ border-left: 250px solid transparent;
 
 .catalog-menu .dropdown-menu>li>a {
     color: #fff;
+    font-size: 12px;
 }
 
 .catalog-menu .dropdown-menu>li>a:hover {
@@ -401,6 +411,23 @@ border-left: 250px solid transparent;
     text-align: center;
 }
 
+/* О компании Производство*/
+.about-production .left-side {
+    background-color: #d5e9f3;
+}
+
+.about-production .page-name-holder {
+    height: 77px;
+    vertical-align: bottom;
+    position: relative;
+}
+
+.about-production .page-name {
+    position: absolute;
+    bottom: 0px;
+}
+
+
 footer {
     background: url(/assets/images/footer-bg.png) no-repeat;
     background-size: cover;
@@ -416,6 +443,7 @@ footer {
 .footer-company-info {
     color: white;
     margin-top: 12px;
+    font-size: 11px;
 }
 
 .footer-logo {
@@ -460,10 +488,12 @@ footer {
 .footer-info .callback-buttons .btn {
     text-transform: lowercase;
     color: #000;
-    font-size: 17px;
-    padding: 4px;
+    font-size: 18px;
     margin-top: 12px;
     border: none;
+    border-radius: 7px;
+    height: 37px;
+    box-sizing: border-box;
 }
 
 .footer-info .callback-buttons .btn:hover {
@@ -490,6 +520,22 @@ footer {
     font-size: 12px;
 }
 
+.footer-info .offices-map img{
+    width: 207px;
+    margin: 8px 0;
+}
+
+.footer-info .offices-link{
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.footer-info .offices-link:hover {
+    text-decoration: none;
+}
+
 .footer-info .contacts-title{
     text-transform: uppercase;
     color: white;
@@ -507,7 +553,7 @@ footer {
 
 .footer-bootom-stripe {
     height: 70px;
-    background-color: rgba(67, 67, 67, 0.48);
+    background-color: rgba(29, 29, 29, 0.49);
 }
 
 .copyright-holder {

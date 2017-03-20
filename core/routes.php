@@ -21,7 +21,7 @@ $routes = array
 		'method' => 'index'
 	),*/
     
-	// ----------Скрипты----------
+	// ----------Админка----------
 	// GET /admin
 	array(
 		'pattern' => '~^/admin/login$~',
@@ -56,9 +56,15 @@ $routes = array
         'admin' => true
 	),
     
+    /* сайт */
     array(
 		'pattern' => '~^/*$~',
 		'script' => 'main'
+	),
+    
+    array(
+		'pattern' => '~^/about(/|/production)*$~',
+		'script' => 'about/production'
 	),
     
     array(

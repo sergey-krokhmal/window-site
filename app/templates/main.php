@@ -1,96 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Сайт</title>
-        <!-- Bootstrap core CSS -->
-        <link href="/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/assets/css/site.css" rel="stylesheet">
-        
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <div class="header-top">
-                    <div class="header-logo">
-                        <a href="/">
-                            <img src="/assets/images/logo.png" alt="logo"/>
-                        </a>
-                    </div>
-                    <div class="elem">
-                        <div class="hol">
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="header-menu-stripe">
-                <div class="container">
-                    <nav class="header-menu">
-                        <ul class="nav nav-tabs">
-                            <li class="col-md-2"><a href="/">Главная</a></li>
-                            <li class="dropdown col-md-2">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">О компании</a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">производство</a></li>
-                                    <li><a href="#">сертификаты</a></li>
-                                    <li><a href="#">галерея</a></li>
-                                    <li><a href="#">новости</a></li>
-                                    <li><a href="#">отзывы</a></li>
-                                    <li><a href="#">наши партнеры</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown col-md-2">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Продукция</a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">test</a></li>
-                                    <li><a href="#">test</a></li>
-                                    <li><a href="#">test</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown col-md-2">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Диллерам</a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">test</a></li>
-                                    <li><a href="#">test</a></li>
-                                    <li><a href="#">test</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown col-md-2">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Всё об окнах</a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">test</a></li>
-                                    <li><a href="#">test</a></li>
-                                    <li><a href="#">test</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown col-md-2">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Где купить</a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">test</a></li>
-                                    <li><a href="#">test</a></li>
-                                    <li><a href="#">test</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <div class="main">
+
             <div class="top-main">
                 <div class="container">
-
                     <div class="col-md-4 col-sm-4">
                     </div>
                     <div class="col-md-8 col-sm-8" >
@@ -100,12 +10,13 @@
                                     <li class="dropdown col-md-3">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Пластиковые</a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">производство</a></li>
-                                            <li><a href="#">сертификаты</a></li>
-                                            <li><a href="#">галерея</a></li>
-                                            <li><a href="#">новости</a></li>
-                                            <li><a href="#">отзывы</a></li>
-                                            <li><a href="#">наши партнеры</a></li>
+                                            <li><a href="#">Rehau BLITZ</a></li>
+                                            <li><a href="#">Rehau SIB-DESIGN</a></li>
+                                            <li><a href="#">Rehau DELIGHT-DESIGN</a></li>
+                                            <li><a href="#">Enwin QUADRO</a></li>
+                                            <li><a href="#">Citiwin STANDART</a></li>
+                                            <li><a href="#">Citiwin COMFORT</a></li>
+                                            <li><a href="#">WDS 7 SERIES</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown col-md-3">
@@ -264,55 +175,4 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <footer>
-            <div class="footer-info container">
-                <div class="col-md-3 links">
-                    <img class="footer-logo" src="/assets/images/logo.png"/>
-                    <p class="footer-company-info">Собственная производственная база, конструктора, монтажники позволяют нам оказывать классный сервис везде, где есть наши представители.</p>
-                    <div class="col-md-4">
-                        <a class="social-link youtube" href="//youtube.ru" target="_blank"></a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="social-link odnoklasniki" href="//ok.ru" target="_blank"></a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="social-link vk" href="//vk.com" target="_blank"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 callback">
-                    <div class="callback-title">Обратная связь</div>
-                    <div class="callback-buttons">
-                        <a class="btn btn-default btn-md btn-block call">Заказать звонок</a>
-                        <a class="btn btn-default btn-md btn-block email">Написать письмо</a>
-                        <a class="btn btn-default btn-md btn-block diller">Стать диллером</a>
-                    </div>
-                </div>
-                <div class="col-md-3 offices">
-                    <div class="offices-title">Работаем по всей России</div>
-                </div>
-                <div class="col-md-3 contacts">
-                    <div class="contacts-title">Связаться с нами</div>
-                    <ul class="list-unstyled contacts-list">
-                        <li class="contacts-item"><div class="glyphicon glyphicon-map-marker col-md-1"></div><div class="col-md-11">г. Ливны<br/>ул. Индустриальная, д. 2Б</div></li>
-                        <li class="contacts-item"><div class="glyphicon glyphicon-earphone col-md-1"></div><div class="col-md-11">+7(48677) 31355</div></li>
-                        <li class="contacts-item"><div class="glyphicon glyphicon-earphone col-md-1"></div><div class="col-md-11">+7(48677) 31085</div></li>
-                        <li class="contacts-item"><div class="glyphicon glyphicon-envelope col-md-1"></div><div class="col-md-11">orddoc@bk.ru</div></li>
-                        <li class="contacts-item"><div class="glyphicon glyphicon-time col-md-1"></div><div class="col-md-11">Пон - Пят: 9:00 - 18:00</div></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bootom-stripe">
-                <div class="container copyright-holder">
-                    <span class="copyright-mark">©2017 Оконная компания LD-LUX</span>
-                </div>
-            </div>
-        </footer>
-        <script src="/assets/libs/jquery/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="/assets/libs/jquery/jquery-ui.min.js"></script>
-        <script src="/assets/libs/jquery/jquery.bxslider.min.js"></script>
-        <script src="/assets/libs/jquery/jquery.cookie.js"></script>
-        <script src="/assets/libs/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/assets/js/scripts.js"></script>
-    </body>
-</html>
+        
