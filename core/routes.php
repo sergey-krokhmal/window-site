@@ -68,6 +68,11 @@ $routes = array
 	),
     
     array(
+		'pattern' => '~^/about/galery*$~',
+		'script' => 'about/galery'
+	),
+    
+    array(
 		'pattern' => '~^/404$~',
 		'script' => 'shared/404'
 	),

@@ -23,12 +23,25 @@
             <div class="container">
                 <div class="header-top">
                     <div class="header-logo">
-                        <a href="/">
-                            <img src="/assets/images/logo.png" alt="logo"/>
-                        </a>
+                        <div class="logo-holder">
+                            <a href="/">
+                                <img src="/assets/images/logo.png" alt="logo"/>
+                            </a>
+                        </div>
+                        <div class="tagline">Производитель ЕВРООКОН<br/> всех видов</div>
                     </div>
-                    <div class="elem">
-                        <div class="hol">
+                    <div class="header-contact-buttons">
+                        <div class="header-triangle"></div>
+                        <div class="header-triangle-a"></div>
+                        <div class="contact-form-holder">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2 order-call-btn-holder">
+                                <a class="btn btn-default btn-block order-call">Заказать звонок</a>
+                                <div class="order-call-btn-cut"></div>
+                            </div>
+                            <div class="col-md-2">
+                                <a class="btn btn-default btn-block write-mail">Написать письмо</a>
+                            </div>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -44,7 +57,7 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="/about/production">Производство</a></li>
                                     <li><a href="#">Сертификаты</a></li>
-                                    <li><a href="#">Галерея</a></li>
+                                    <li><a href="/about/galery">Галерея</a></li>
                                     <li><a href="#">Новости</a></li>
                                     <li><a href="#">Отзывы</a></li>
                                     <li><a href="#">Наши партнеры</a></li>
