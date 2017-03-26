@@ -1,7 +1,8 @@
 <?
 	require_once($_SERVER['DOCUMENT_ROOT']."/core/routes.php");
 	require_once($root."/core/db/DB.php");
-	
+	phpinfo();
+	exit;
 	$db = new DbDriverPdo($db_config_params['wd']['params']);
     
     // Получить uri запрос

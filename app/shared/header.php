@@ -9,6 +9,7 @@
         <title>Сайт</title>
         <!-- Bootstrap core CSS -->
         <link href="/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/libs/fancybox/jquery.fancybox.min.css" rel="stylesheet">
         <link href="/assets/css/site.css" rel="stylesheet">
         
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -59,19 +60,20 @@
                                     <li><a href="#">Сертификаты</a></li>
                                     <li><a href="/about/galery">Галерея</a></li>
                                     <li><a href="#">Новости</a></li>
-                                    <li><a href="#">Отзывы</a></li>
-                                    <li><a href="#">Наши партнеры</a></li>
+                                    <li><a href="/about/reviews">Клиенты о нас</a></li>
+                                    <li><a href="/about/partners">Наши партнеры</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown col-md-2">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Продукция</a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">пластиковые</a></li>
-                                    <li><a href="#">деревянные</a></li>
-                                    <li><a href="#">деревянно-алюминиевые</a></li>
-                                    <li><a href="#">алюминиевые конструкции</a></li>
-                                    <li><a href="#">стеклопакеты</a></li>
-                                    <li><a href="#">наши партнеры</a></li>
+                                    <li><a href="/production/plastic">пластиковые</a></li>
+                                    <li><a href="/production/wood">деревянные</a></li>
+                                    <li><a href="/production/plastic-wood">деревянно-алюминиевые</a></li>
+                                    <li><a href="/production/aluminium">алюминиевые конструкции</a></li>
+                                    <li><a href="/production/glazed">стеклопакеты</a></li>
+                                    <li><a href="/production/accessories">аксессуары</a></li>
+                                    <li><a href="/production/fittings">фурнитура</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown col-md-2">

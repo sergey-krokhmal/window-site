@@ -1,11 +1,11 @@
 <?
     $links = array(
         "/about/production" => "производство",
-        "#1" => "сертификаты",//"/about/sertificats" => "сертификаты",
+        "#1" => "сертификаты",
         "/about/galery" => "галерея",
-        "#2" => "новости",//"/about/production" => "новости",
-        "#3" => "отзывы",//"/about/production" => "отзывы",
-        "#4" => "наши партнеры",//"/about/production" => "наши партнеры"
+        "#2" => "новости",
+        "/about/reviews" => "клиенты о нас",
+        "/about/partners" => "наши партнеры",
     );
 ?>
 <div class="col-md-4 col-sm-4 left-side">

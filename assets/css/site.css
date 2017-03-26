@@ -349,19 +349,23 @@ header {
 }
 
 .window-info-photo-holder {
-    padding: 6px 22px;
-    float: left;
     width: 130px;
+    height: 145px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
 }
 
 .window-info-photo-img {
-    width: 90px;
+    max-width: 130px;
+    max-height: 130px;
 }
 
 .window-info-params {
-    float: left;
+    vertical-align: middle;
+    display: table-cell;
     margin-top: 28px;
-    
+    margin-left: 8px;
 }
 .window-info-params>ul>li{
     font-family: 'Lato-Regular';
@@ -379,6 +383,11 @@ header {
     text-align: center;
     height: 210px;
     background-color: rgba(255, 255, 255, 0.58);
+}
+
+.window-slider .img-holder img{
+    max-width: 215px;
+    max-height: 210px;
 }
 
 .window-slider .price-holder {
@@ -528,6 +537,7 @@ header {
 
 .right-side {
     background-color: #fff;
+    display: flex;
 }
 
 .right-side-content {
@@ -571,6 +581,38 @@ header {
     max-height: 210px;
     max-width: 700px;
     background-color: rgba(255, 255, 255, 0.58);
+}
+
+.middle-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.partner-item {
+    float: left;
+    border: 1px solid #ddd;
+    margin-bottom: 4px;
+}
+
+.partner-list .img-holder {
+    width: 215px;
+    margin-right: 10px;
+    height: 123px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.partner-list .img-holder img {
+    max-width: 215px;
+    max-height: 123px;
+}
+
+.partner-description {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
 }
 
 footer {

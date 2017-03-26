@@ -51,6 +51,7 @@
         <script src="/assets/libs/jquery/jquery.bxslider.min.js"></script>
         <script src="/assets/libs/jquery/jquery.cookie.js"></script>
         <script src="/assets/libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/libs/fancybox/jquery.fancybox.min.js"></script>
         <script src="/assets/js/scripts.js"></script>
     </body>
 </html>

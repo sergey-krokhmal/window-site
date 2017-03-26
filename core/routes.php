@@ -57,9 +57,20 @@ $routes = array
 	),
     
     /* сайт */
-    array(
+    /*array(
 		'pattern' => '~^/*$~',
 		'script' => 'main'
+	),*/
+    
+    array(
+		'pattern' => '~^/*$~',
+		'script' => 'production/plastic'
+	),
+    
+    array(
+		'pattern' => '~^/production/plastic/([a-z0-9_/\-]+)$~',
+		'script' => 'production/plastic',
+        'aliases' => array('model')
 	),
     
     array(
@@ -70,6 +81,16 @@ $routes = array
     array(
 		'pattern' => '~^/about/galery*$~',
 		'script' => 'about/galery'
+	),
+    
+    array(
+		'pattern' => '~^/about/reviews*$~',
+		'script' => 'about/reviews'
+	),
+    
+    array(
+		'pattern' => '~^/about/partners*$~',
+		'script' => 'about/partners'
 	),
     
     array(

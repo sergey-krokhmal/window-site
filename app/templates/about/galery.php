@@ -10,7 +10,9 @@
                         <?foreach($photos as $i => $photo):?>
                             <li>
                                 <div class="img-holder">
-                                    <img src="/files/images/galery/<?=$photo['name']?>">
+                                    <a href="/files/images/<?=ABOUT_DIR?><?=$photo['name']?>" data-fancybox="group">
+                                        <img src="/files/images/<?=ABOUT_DIR?><?=$photo['name']?>">
+                                    </a>
                                 </div>
                             </li>
                         <?endforeach?>
@@ -19,7 +21,7 @@
                         <?foreach($photos as $i => $photo):?>
                             <a data-slide-index="<?=$i?>" href="">
                                 <span class="img-holder">
-                                    <img src="/files/images/galery/<?=$photo['name']?>" />
+                                        <img src="/files/images/<?=ABOUT_DIR?><?=$photo['name']?>" alt=""/>
                                 </span>
                             </a>
                         <?endforeach?>

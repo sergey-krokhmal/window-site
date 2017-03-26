@@ -26,4 +26,7 @@ $(document).ready(function(){
         nextSelector: '.slider-right',
         prevSelector: '.slider-left'
 	});
+    
+    $("[data-fancybox]").fancybox({
+	});
 });
